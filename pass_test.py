@@ -35,5 +35,14 @@ class TestPass(unittest.TestCase):
       tearDown method that does clean up after each test case has execute
       '''
       Pass.pass_list=[]
+
+      def test_save_mulitple_pass(self):
+        '''
+        test_save_mulitple_pass to check if we can save mulitple pass objects to our list
+        '''
+        self.new_pass.save_pass()
+        test_pass = Pass("test","user","0732442483","test@pass.com") #new pass user
+        test_pass.save_pass()
+        self.assertEqual(len(Pass.pass_list),2)
 if __name__ == '__main__':
     unittest.main()
