@@ -24,7 +24,7 @@ return new_pass
        function that check if a user exists with the number and return either true or false
        '''
        return Pass.user_exist(number)
-       def display_users():
+       def display_users(): 
          '''
          function that returns the saved users
          '''
