@@ -50,3 +50,11 @@ class Pass:
                 if pass.password = password:
                   return True
           return False 
+          @classmethod 
+          def display_usesrs(cls):
+            '''
+            method that returns the user list
+            '''
+            return cls.pass_list
+            @classmethod
+            def copy_emails(cls,number)
