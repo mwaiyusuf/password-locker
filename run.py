@@ -5,7 +5,7 @@ creating a new user
 new_pass = Pass(flname,usname,password,email)
 return new_pass
  def save_users(pass):
-   '''
+   ''' 
    function to save pass
    '''
    user.save_pass()
