@@ -13,7 +13,7 @@ class Pass:
     self.password = passwsord
     sel.email = email
 
-    def save_pass(self):
+    def save_pass(self): 
       '''
       save_pass method saves user object inot pass_list
       '''
