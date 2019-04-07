@@ -59,9 +59,29 @@ class TestPass(unittest.TestCase):
             test to check if there is a user by phone number and display
             '''
             self.new_pass.save_pass()
-            test_pass = pass("Test","pass","0799315832","mwaigalo5@pass.com") #new user
+            test_pass = pass("Test","pass","0799315832","mwaigalo5@pass.com") #new pass
             test_pass.save_user()
             found_Pass = Pass.find_by_number("0727765213")
-             self.asserEqual(found_pass.email,test_pass.email)
+             self.assertEqual(found_pass.email,test_pass.email)
+             def test_pass_exists(self):
+               '''
+               test to check if a boolean can be return,when a suer be found
+               '''
+               self.new_pass.save_pass()
+               test_pass = pass("test","pass","0721817801","mom@pass.com") #new pass
+               test_pass.save_pass()
+               pass_exists = Pass.pass_exist("0721817801")
+               self.assertTrue(pass_exist)
+                def test_display_all_users(self):
+                  '''
+                  method that returns all user saved
+                  '''
+                  self.assertEqual(pass.display_users(),pass.pass_list)
+
+                  def test_copy_email(self):
+                    '''
+                    testing to confirm that we are copying the email address from a found user
+                    '''
+                    self.assertEqual(self.new_pass.email,pyperclip.paste())
 if __name__ == '__main__':
     unittest.main()
