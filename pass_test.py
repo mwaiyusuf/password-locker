@@ -15,7 +15,7 @@ class TestPass(unittest.TestCase):
         Set up method to run before each test cases.
         '''
         self.new_pass = Pass("James","Muriuki","0712345678","james@ms.com") # create pass object
- def test_init(self):
+ def test_init(self): 
         '''
         test_init test case to test if the object is initialized properly
         '''
