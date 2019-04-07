@@ -44,5 +44,24 @@ class TestPass(unittest.TestCase):
         test_pass = Pass("test","user","0732442483","test@pass.com") #new pass user
         test_pass.save_pass()
         self.assertEqual(len(Pass.pass_list),2)
+        def test_delete_pass(self):
+          '''
+          test_delete_pass to test if we can get rid off pass list
+          '''
+          self.new_pass.save_pass()
+          test_pass = pass("test","pass","07324424856","test@gmail.vom") #new pass
+          test_pass.save.save_pass()
+
+          self.assertEqual(len(Pass.pass_list),2)
+          
+          def test_find+pass_by_number(self):
+            '''
+            test to check if there is a user by phone number and display
+            '''
+            self.new_pass.save_pass()
+            test_pass = pass("Test","pass","0799315832","mwaigalo5@pass.com") #new user
+            test_pass.save_user()
+            found_Pass = Pass.find_by_number("0727765213")
+             self.asserEqual(found_pass.email,test_pass.email)
 if __name__ == '__main__':
     unittest.main()
