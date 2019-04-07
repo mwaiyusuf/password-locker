@@ -57,4 +57,6 @@ class Pass:
             '''
             return cls.pass_list
             @classmethod 
-            def copy_emails(cls,number)
+            def copy_emails(cls,number):
+              pass_foound = Pass.find_by_number(number)
+              pyperclip.copy(user_found.email)
