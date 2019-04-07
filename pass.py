@@ -45,8 +45,8 @@ class Pass:
               number: phone number to search if it exists
               Returns :
               Boolean" True or false depending if the user exists
-              '''
-              for padd in cls.pass_list:
+              ''' 
+              for pass in cls.pass_list:
                 if pass.password = password:
                   return True
           return False 
