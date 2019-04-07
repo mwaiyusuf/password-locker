@@ -9,7 +9,7 @@ return new_pass
    function to save pass
    '''
    user.save_pass()
-   def del_pass(user):
+   def del_pass(user): 
      '''
      function to delete a pass
      '''
@@ -18,4 +18,3 @@ return new_pass
        '''
        function that finds a usesr by number and rerurns into the use
        '''
-       
