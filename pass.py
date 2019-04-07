@@ -38,4 +38,4 @@ class Pass:
             if pass.password == password:
               rerurn pass
               @classmethod
-              def pass_exist(cls,number);
+              def pass_exist(cls,number); 
