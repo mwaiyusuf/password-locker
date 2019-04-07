@@ -56,5 +56,5 @@ class Pass:
             method that returns the user list
             '''
             return cls.pass_list
-            @classmethod
+            @classmethod 
             def copy_emails(cls,number)
