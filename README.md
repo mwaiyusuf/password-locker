@@ -17,9 +17,9 @@ As a user I would like:
 ## Specifications
 | Behaviour | Input | Output |
 | :---------------- | :---------------: | ------------------: |
-| Display codes for navigation | **In terminal: $./password-locker.py** | Welcome, choose an option: 1-Create Account, 2-Log In, ex-Exit |
-| Display  for creating an account | **Enter: ca** | Enter your first name, last name and password |
-| Display  for login in | **Enter: li** | Enter your account name and password |
+| Display codes for navigation | **In terminal: $./run.py** | Welcome, choose an option: 1-Create Account, 2-Log In, ex-Exit |
+| Display  for creating an account | **Enter: 1** | Enter your first name, last name and password |
+| Display  for login in | **Enter: 2** | Enter your account name and password |
 | Display codes for navigation | **Successful login** | Choose an option: 1 - Create Credential, 2 - Display Credentials, copy - Copy Credential, ex - exit |
 | Display prompt for creating a credential | **Enter: cc** | Enter your name, your username and password |
 | Display a list of credentials | **Enter: dc** | Prints a list of saved credentials |
