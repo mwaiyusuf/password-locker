@@ -43,5 +43,73 @@ return new_pass
                4.exist pass_locker
                '''
              )
-             print(list)
-             print("")
+              print(list)
+        print("Use these short codes : 1 - create a new user, 2 - display users, 3 -find a user, 4 -exit the Password locker ")
+
+        short_code = input().lower()
+
+        if short_code == '1':
+            print("New User")
+            print("-"*10)
+
+            print ("First name ....")
+            f_name = input()
+
+            print("Last name ...")
+            l_name = input()
+
+            print("Phone number ...")
+            p_number = input()
+
+            print("Email address ...")
+            e_address = input()
+
+            print("Password ...")
+            password = input()
+
+            print("confirm password ...")
+            password1 = input()
+         save_users(create_user(f_name,l_name,p_number,e_address,password)) # create and save new user.
+            print ('\n')
+            print(f"New User {f_name} {l_name} created")
+            print ('\n')
+
+        elif short_code == '2':
+
+            if display_users():
+                print("Here is a list of all your users")
+                print('\n')
+
+                for user in display_users():
+                    print(f"{user.first_name} {user.last_name} .....{user.phone_number}")
+
+                    print('\n')
+                else:
+                    print('\n')
+
+                    print('\n')
+
+        elif short_code == '3':
+
+            print("Enter the number you want to search for")
+
+            search_number = input()
+            if check_existing_users(search_number):
+                search_user = find_user(search_number)
+                print(f"{search_user.first_name} {search_user.last_name}")
+                print('-' * 20)
+                 print(f"Phone number.......{search_user.phone_number}")
+                print(f"Email address.......{search_user.email}")
+            else:
+                print("That user does not exist")
+
+        elif short_code == "4":
+            print("Bye .......")
+            break
+        else:
+            print("I really didn't get that. Please use the short codes")
+
+
+if __name__ == '__main__':
+
+    main()
