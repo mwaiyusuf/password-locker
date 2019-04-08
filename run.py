@@ -23,16 +23,16 @@ return new_pass
        '''
        function that check if a user exists with the number and return either true or false
        '''
-       return Pass.user_exist(number)
+       return Pass.pass_exist(number)
        def display_users(): 
          '''
          function that returns the saved users
          '''
-         return user.display_users() 
+         return pass.display_users() 
          def main(): 
            print("Hello, welcome. \n What is your name?")
-           user_name = input()
-           print(f"Hey {user_name}.What would you like to do?")
+           pass_name = input()
+           print(f"Hey {pass_name}.What would you like to do?")
            
            while True:
              list = (
@@ -49,29 +49,28 @@ return new_pass
         short_code = input().lower()
 
         if short_code == '1':
-            print("New User")
+            print("New pass")
             print("-"*10)
 
             print ("First name ....")
-            f_name = input()
+            fl_name = input()
 
             print("Last name ...")
-            l_name = input()
+            us_name = input()
 
             print("Phone number ...")
-            p_number = input()
+            password_number = input()
 
             print("Email address ...")
             e_address = input()
 
-            print("Password ...")
-            password = input()
+           
 
             print("confirm password ...")
             password1 = input()
-         save_users(create_user(f_name,l_name,p_number,e_address,password)) # create and save new user.
+         save_users(create_user(fl_name,us_name,password_number,e_address, )) # create and save new user.
             print ('\n')
-            print(f"New User {f_name} {l_name} created")
+            print(f"New User {fl_name} {us_name} created")
             print ('\n')
 
         elif short_code == '2':
@@ -80,8 +79,8 @@ return new_pass
                 print("Here is a list of all your users")
                 print('\n')
 
-                for user in display_users():
-                    print(f"{user.first_name} {user.last_name} .....{user.phone_number}")
+                for pass in display_users():
+                    print(f"{pass.first_name} {pass.us_name} .....{pass.password_number}")
 
                     print('\n')
                 else:
@@ -95,7 +94,7 @@ return new_pass
 
             search_number = input()
             if check_existing_users(search_number):
-                search_user = find_user(search_number)
+                search_pass = find_pass(search_number)
                 print(f"{search_user.first_name} {search_user.last_name}")
                 print('-' * 20)
                  print(f"Phone number.......{search_user.phone_number}")
