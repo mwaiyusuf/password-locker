@@ -6,7 +6,7 @@ from user import Loc_user #importing the loc_user class
 class TestPass(unittest.TestCase):
 
     '''
-    Test class that defines test cases for the pass class behaviours.
+    Test class that defines test cases for the user class behaviours.
 
     Args:
         unittest.TestCase: TestCase class that helps in creating test cases
@@ -32,7 +32,7 @@ class TestPass(unittest.TestCase):
 
     def test_save_credentials(self):
       '''
-      test_save_pass test case to test if the user object is saved into the pass list 
+      test_save_user test case to test if the user object is saved into the user list 
       '''
       self.new_user.save_user_credentials()  #saving the new user pass
       self.assertEqual(len(User.user_list),1)
@@ -46,7 +46,7 @@ class TestPass(unittest.TestCase):
 
     def test_save_mulitple_user(self):
       '''
-      test_save_mulitple_pass to check if we can save mulitple pass objects to our list
+      test_save_mulitple_user to check if we can save mulitple user objects to our list
       '''
       self.new_user.save_user_credentials()
       test_user = User("test","user","0732442483","test@pass.com") #new pass user
@@ -55,7 +55,7 @@ class TestPass(unittest.TestCase):
 
     def test_delete_user(self):
       '''
-      test_delete_pass to test if we can get rid off pass list
+      test_delete_user to test if we can get rid off user list
       '''
       self.new_user.save_user_credentials()
       test_user = user("test","pass","07324424856","test@gmail.vom") #new pass
@@ -74,7 +74,7 @@ class TestPass(unittest.TestCase):
 
     def test_user_exists(self):
       '''
-      test to check if a boolean can be return,when a suer be found
+      test to check if a boolean can be return,when a user be found
       '''
       self.new_user.save_user()
       test_user = user("test","pass","0721817801","mom@pass.com") #new pass

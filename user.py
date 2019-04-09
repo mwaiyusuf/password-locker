@@ -1,4 +1,4 @@
-import pyperclip
+import pyperclip 
 
 class User:
   '''
@@ -15,13 +15,13 @@ class User:
 
   def save_user_credentials(self): 
     '''
-    save_pass method saves user object inot pass_list
+    save_user method saves user object inot user_list
     '''
     User.user_list.append(self)
 
   def delete_user_credentials(self):
     '''
-    delete_pass method deletes a saved user from the pass_list
+    delete_user method deletes a saved user from the user_list
     '''
     User.user_user.remove(self)
 
